@@ -30,12 +30,12 @@ const Header = () => {
           }`}
         >
           <ul className="flex flex-col md:flex-row md:gap-6 p-4 md:p-0 text-lg">
-            <li>
+            <li onClick={toggleMenu}>
               <Link to="/" className="block py-2 md:py-0 hover:text-gray-300">
                 Home
               </Link>
             </li>
-            <li>
+            <li onClick={toggleMenu}>
               <Link
                 to="/event"
                 className="block py-2 md:py-0 hover:text-gray-300"
@@ -43,7 +43,7 @@ const Header = () => {
                 Events
               </Link>
             </li>
-            <li>
+            <li onClick={toggleMenu}>
               <Link
                 to="/fund"
                 className="block py-2 md:py-0 hover:text-gray-300"
@@ -51,7 +51,7 @@ const Header = () => {
                 Funds
               </Link>
             </li>
-            <li>
+            <li onClick={toggleMenu}>
               <Link
                 to="/expense"
                 className="block py-2 md:py-0 hover:text-gray-300"
@@ -59,7 +59,7 @@ const Header = () => {
                 Expenses
               </Link>
             </li>
-            <li>
+            <li onClick={toggleMenu}>
               <Link
                 to="/gallery"
                 className="block py-2 md:py-0 hover:text-gray-300"
@@ -67,7 +67,7 @@ const Header = () => {
                 Gallery
               </Link>
             </li>
-            <li>
+            <li onClick={toggleMenu}>
               <Link
                 to="/contact"
                 className="block py-2 md:py-0 hover:text-gray-300"
