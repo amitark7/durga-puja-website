@@ -13,13 +13,13 @@ const PageHeader = ({ text }) => {
 
   return (
     <header
-      className="w-full relative"
+      className="w-full relative z-0"
       style={headerStyle}
       aria-label="Page Header"
     >
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
       <div className="relative flex items-center justify-center h-full">
-        <div className="p-4 bg-opacity-60 rounded-md">
+        <div className="p-4 bg-opacity-60 rounded-md z-0">
           <h1 className="text-2xl md:text-4xl text-white font-bold text-center">
             {text}
           </h1>

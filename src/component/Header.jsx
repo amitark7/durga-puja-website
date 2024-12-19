@@ -25,7 +25,7 @@ const Header = () => {
 
         {/* Navigation Menu */}
         <nav
-          className={`md:flex md:items-center absolute md:static top-16 left-0 w-full md:w-auto bg-blue-600 md:bg-transparent transition-all duration-300 ease-in-out ${
+          className={`md:flex z-50 md:items-center absolute md:static top-16 left-0 w-full md:w-auto bg-blue-600 md:bg-transparent transition-all duration-300 ease-in-out ${
             isOpen ? "block" : "hidden"
           }`}
         >
