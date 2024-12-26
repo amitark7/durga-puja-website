@@ -7,11 +7,13 @@ import Events from "./pages/Events";
 import Galleries from "./pages/Galleries";
 import Funds from "./pages/Funds";
 import Contact from "./pages/Contact";
+import ScrollToTop from "./component/scrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
       <Header />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>

@@ -10,7 +10,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bh-white text-black">
+    <header className="bh-white text-black sticky" style={{ top: "0%" }}>
       <div className="container mx-auto flex justify-between items-center h-[80px]">
         {/* Logo Section */}
         <h1 className="text-2xl font-bold">My Website</h1>
