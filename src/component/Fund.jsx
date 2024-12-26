@@ -2,11 +2,12 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getFundList } from "../store/reducer/reducer";
 import { Link } from "react-router-dom";
+import { GoDownload } from "react-icons/go";
 
 const Fund = () => {
   const { fundList } = useSelector((state) => state.list);
   const dispatch = useDispatch();
-
+  console.log("FundList ----> ", fundList);
   useEffect(() => {
     dispatch(getFundList());
   }, [dispatch]);
@@ -32,7 +33,7 @@ const Fund = () => {
                 <th className="px-4 py-2 text-left text-gray-600">पता</th>
                 <th className="px-4 py-2 text-left text-gray-600">राशि</th>
                 <th className="px-4 py-2 text-left text-gray-600">तिथि</th>
-                <th className="px-4 py-2 text-center text-gray-600">रसीद</th>
+                <th className="px-4 py-2 text-left text-gray-600">रसीद</th>
               </tr>
             </thead>
             <tbody>
@@ -45,23 +46,11 @@ const Fund = () => {
                   <td className="px-4 py-2">{fund.date}</td>
                   <td className="px-4 py-2 text-center">
                     <a
-                      href={fund.receipt}
-                      className="text-green-500 hover:text-green-700"
+                      href={fund.reciept}
+                      className="text-green-500 block hover:text-green-700 cursor-pointer"
+                      target="_blank"
                     >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-5 w-5 inline"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M19 9l-7 7-7-7"
-                        />
-                      </svg>
+                      <GoDownload size={18} color="black" />
                     </a>
                   </td>
                 </tr>
